@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-size: 100%;
+  font-family: "Roboto";
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body, html { height: 100%; width: 100%;}
+ul, ol { list-style: none; }
+
+/* HEADER STARTS HERE */
+
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+}
+
+header:before {
+  content: "";
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(90, 90, 90, 0.6), rgba(102, 94, 103, 0.6)), url("https://en.drivar.de/wp-6401f-content/uploads/2022/10/760ee486-6852-4bf9-a0ef-2dab7ec0828a.jpeg") no-repeat fixed top center / cover;
+}
+
+header h2 {
+    color: #fff;
+    font-size: 92px;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    margin: auto;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* HEADER ENDS HERE */
+
+
+/* NAVBAR STARTS HERE */
+
+.icon {
+    display: none;
+}
+
+.toggle {
+    color: #EEE;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+header nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+}
+
+header nav .logo { 
+  color: #fff; 
+  font-size: 2em; 
+  padding: 20px 20px 10px 20px;
+}
+
+header nav .logo span {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+header nav .logo a { color: #fff; text-decoration: none;}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header nav li a {
+  color: #fff;
+  display: block;
+  position: relative;
+  padding: 20px 20px 10px;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+header nav li a:before, header nav li a:after {
+  content: "";
+  bottom: 0;
+  width: 0px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;  
+}
+
+header nav li a:before { right: 50%; }
+header nav li a:after { left: 50%; }
+
+header nav li a:hover:before , header nav li a:hover:after {
+  width: 50%;
+}
+
+/* NAVBAR ENDS HERE */
+
+
+/* MEDIA QUERY STARTS HERE */
+
+@media (max-width: 650px) {
+    header nav .logo {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: 1.5em;
+    }
+
+    .icon {
+        width: 170%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+    }
+    .list-item {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      background-color: transparent;
+      display: none;
+    }
+    .list-item li {
+      text-align: center;
+      display: block;
+      float: none;
+    }
+
+    header h2 {
+        font-size: 45px;
+    }
+  }
+
+/* MEDIA QUERY ENDS HERE */
