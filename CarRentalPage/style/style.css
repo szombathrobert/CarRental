@@ -1,5 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+
+:root {
+  --font: 'Ubuntu', sans-serif;
+  --p_font: 'Jost', sans-serif;
+  --white: #fff;
+  --boldness: 700;
+}
+
 
 *{
   margin: 0;
@@ -7,6 +15,11 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+body {
+  background-color: #d0d0d0;
+}
+
 /* custom scroll bar */
 ::-webkit-scrollbar {
     width: 10px;
@@ -31,13 +44,13 @@
 }
 
 .banner h2 {
-  color: #fff;
+  color: var(--white);
   font-size: 92px;
   text-align: center;
   justify-content: center;
   letter-spacing: 2px;
   margin: auto;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: var(--font)
 }
 .content{
   max-width: 1250px;
@@ -46,13 +59,13 @@
 }
 
 header nav .logo { 
-  color: #fff; 
+  color: var(--white); 
   font-size: 2em; 
 }
 
 header nav .logo span {
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: var(--boldness);
 }
 
 .exnav{
@@ -73,28 +86,47 @@ header nav .logo span {
   justify-content: space-between;
 }
 .exnav .logo a{
-  color: #fff;
+  color: var(--white);
   font-size: 30px;
   font-weight: 600;
   text-decoration: none;
 }
 .exnav .menu-list{
   display: inline-flex;
+  justify-content: center;
 }
 .menu-list li{
   list-style: none;
 }
 .menu-list li a{
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  margin-left: 25px;
+  color: var(--white);
+  text-transform: uppercase;
   text-decoration: none;
-  transition: all 0.3s ease;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  font-weight: 600;
+  padding: 15px 20px;
+  position: relative;
+  justify-content: center;
 }
-.menu-list li a:hover{
-  color: #007bff;
+
+.menu-list li a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: var(--white);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
+.menu-list li a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
 .banner{
   background: linear-gradient(rgba(90, 90, 90, 0.6), rgba(102, 94, 103, 0.6)), url("https://en.drivar.de/wp-6401f-content/uploads/2022/10/760ee486-6852-4bf9-a0ef-2dab7ec0828a.jpeg") no-repeat fixed top center / cover;
   height: 100vh;
@@ -107,14 +139,14 @@ header nav .logo span {
 }
 .about .title{
   font-size: 38px;
-  font-weight: 700;
+  font-weight: var(--boldness);
 }
 .about p{
   padding-top: 20px;
   text-align: justify;
 }
 .icon{
-  color: #fff;
+  color: var(--white);
   font-size: 20px;
   cursor: pointer;
   display: none;
@@ -124,6 +156,63 @@ header nav .logo span {
   right: 30px;
   top: 20px;
 }
+
+
+/* FIRST CONTAINER */
+
+h4 {
+  text-align: center;
+  font-size: 40px;
+  font-family: var(--font);
+  padding: 15px;
+}
+
+.frt_p {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.card{
+  margin: 10px auto;
+  box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.2);
+  border-radius: 6px;
+  height: 100%;
+  transition: 0.3s;
+}
+.card:hover {
+box-shadow: 1px 10px 16px 0 rgba(0,0,0,0.3);
+}
+.card-title{
+  text-align: center;
+  color: #666666;
+  font-weight: bold;
+}
+.card-text{
+      font-weight: 500;
+color: #66686b;
+}
+.card-image{
+  text-align: center;
+  margin: 5vh 0;
+}
+.card-text{
+  text-align: center;
+  font-family: var(--p_font);
+  font-weight: var(--boldness);
+}
+
+.title-heading{
+  font-size: 3em;
+  text-align: center;
+  margin: 4%;
+  font-weight: bold;
+}
+
+.card-logo {
+  width: 30%;
+  height: 30%;
+}
+
 @media (max-width: 1230px) {
   .content{
     padding: 0 60px;
