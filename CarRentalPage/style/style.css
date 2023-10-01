@@ -425,6 +425,19 @@ section {
   transition: .5s ease-in-out all;
 }
 
+.contact_area option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #000;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.contact_area option:hover {
+  color: #000;
+}
+
+select option:hover { color: black; }
+
 /* CONTACT END HERE */
 
 /* Car page CSS Start here */
