@@ -38,6 +38,8 @@ body {
 
 /* custom scroll bar end*/
 
+/* header start */
+
 
 .header-banner {
   width: 100%;
@@ -108,7 +110,7 @@ header nav .logo span {
   transition: all 0.3s ease;
 }
 .exnav.sticky{
-  background: #1b1b1b;
+  background: #1b1b1be1;
   padding: 10px 0;
   box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
 }
@@ -181,6 +183,9 @@ header nav .logo span {
   right: 30px;
   top: 20px;
 }
+
+/* header end */
+
 
 
 /* FIRST CONTAINER */
@@ -394,8 +399,177 @@ section {
   object-fit:scale-down;
 }
 
+.brand_img:hover {
+  transform: scale(1.1);
+  transition: .5s all ease-in-out;
+}
+
 /* BRANDS END */
 
+/* CONTACT START HERE */
+
+.contact_area {
+  border: 1px solid black;
+  letter-spacing: 1px;
+}
+
+.contact_button {
+  background-color: #5b5b5b !important;
+  padding: 15px 80px
+}
+
+.contact_button:hover {
+  color: var(--white);
+  background-color: #7b7a7a !important;
+  transform: scale(1.1);
+  transition: .5s ease-in-out all;
+}
+
+/* CONTACT END HERE */
+
+/* Car page CSS Start here */
+
+/* Car Cards Start */
+
+.container .car_card {
+  position: relative;
+  max-width : 300px;
+  height : 215px;  
+  background-color : #fff;
+  padding : 20px 15px;
+  display : flex;
+  flex-direction : column;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+  transition : 0.3s ease-in-out;
+  border-radius : 15px;
+}
+
+.container .car_card:hover {
+  height : 400px;
+}
+
+.container .car_card .image {
+  margin-top: 20px;
+  position : relative;
+  width : 260px;
+  top : -40%;
+  left: 6px;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+  z-index : 1;
+}
+
+.container .car_card .image img {
+  max-width : 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius : 15px;
+}
+
+.container .car_card .content {
+  position : relative;
+  top : -140px;
+  padding : 10px 15px;
+  color : #111;
+  text-align : center;
+  visibility : hidden;
+  opacity : 0;
+  transition : 0.3s ease-in-out;
+}
+
+.container .car_card:hover .content {
+    margin-top : 30px;
+    visibility : visible;
+    opacity : 1;
+    transition-delay: 0.2s;
+}
+
+.container .car_card .content h5 {
+  font-family: var(--font);
+  font-size: 25px;
+}
+
+.container .car_card .content small {
+  font-size: 16px;
+}
+
+hr {
+  border: none;
+  background-color: #000;
+  color: #000;
+  height: 5px;
+}
+
+.container .car_card .content p {
+  font-family: var(--p_font);
+  font-weight: var(--boldness);
+  font-size: 14px;
+}
+
+/* Car Card End */
+
+/* Car page CSS Ends here
+
+/* FOOTER START */
+
+footer {
+  bottom: 0;
+}
+
+.footer-basic-centered{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+	font: normal 18px sans-serif;
+}
+
+.footer-basic-centered .footer-company-motto{
+	color:  #8d9093;
+	font-size: 24px;
+	margin: 0;
+}
+
+.footer-basic-centered .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
+}
+
+.footer-basic-centered .footer-links{
+	list-style: none;
+	font-weight: bold;
+	color:  #ffffff;
+	margin: 0;
+}
+
+.footer-basic-centered .footer-links a{
+	display:inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+
+.facebook_logo:hover {
+  color: #7d60ff;
+}
+
+.twitter_logo:hover {
+  color: #1DA1F2;
+}
+
+.youtube_logo:hover {
+  color: #FF0000;
+}
+
+.instagram_logo:hover {
+  color: linear-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+.linkedin_logo:hover {
+  color: #0e76a8;
+}
+
+/* FOOTER END */
 
 /* MEDIA QUERY */
 
@@ -451,6 +625,27 @@ section {
   .exnav.show .menu-list li a{
     margin-left: 0px;
   }
+
+  .footer-basic-centered{
+		padding: 35px;
+	}
+
+	.footer-basic-centered .footer-company-motto{
+		font-size: 18px;
+	}
+
+	.footer-basic-centered .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-basic-centered .footer-links{
+		font-size: 14px;
+		padding: 25px 0 20px;
+	}
+
+	.footer-basic-centered .footer-links a{
+		line-height: 1.8;
+	}
 }
 @media (max-width: 380px) {
   .exnav .logo a{

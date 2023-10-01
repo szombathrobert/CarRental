@@ -18,7 +18,7 @@
         <nav class="exnav">
             <div class="content">
               <div class="logo">
-                <a href="#">Car<span>Rental</span></a>
+                <a href="./index.html">Car<span>Rental</span></a>
               </div>
               <ul class="menu-list">
                 <div class="icon cancel-btn">
@@ -26,16 +26,16 @@
                 </div>
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="./cars.html"">Cars</a></li>
+                <li><a href="#contact">Contact</a></li>
               </ul>
               <div class="icon menu-btn">
                 <i class="fas fa-bars"></i>
               </div>
             </div>
           </nav>
-          <div class="header-banner">
+          <div class="header-banner" id="main">
             <h2>Rental your dream car!</h2>
           </div>
     </header>
@@ -89,7 +89,7 @@
 
     <!-- Swiper Start -->
 
-    <div class="container">
+    <div class="container" id="services">
       <h4>Our most rented cars</h4>
       <div class="swiper">
         <div class="swiper-wrapper">
@@ -184,6 +184,53 @@
     </div>
 
     <div class="banner"></div>
+
+    <div class="container" id="contact">
+      <h4>Contact us for more information!</h4>
+      <form class="text-center m-auto">
+        <div class="form-group">
+          <label>Email address</label>
+          <input type="email" class="form-control w-50 m-auto contact_area" placeholder="Your email here">
+        </div>
+        <div class="form-group">
+          <label>Full name</label>
+          <input type="text" class="form-control w-50 m-auto contact_area" placeholder="Your name here">
+        </div>
+        <div class="form-group">
+          <label>Select what car do u want to rent</label>
+          <select class="form-control w-50 m-auto contact_area" id="exampleFormControlSelect1">
+            <option>Audi a5 S-line</option>
+            <option>BMW M2</option>
+            <option>Mercedes AMG C63</option>
+            <option>Kia Ceed</option>
+            <option>Ford Focu</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea class="form-control m-auto w-50 contact_area" rows="3" placeholder="Write your message or question here"></textarea>
+        </div>
+        <button type="submit" class="btn btn-info m-2 contact_button">Submit</button>
+      </form>
+    </div>
+
+    <div class="banner"></div>
+
+    <footer class="footer-basic-centered">
+      <h4 class="footer-company-motto">CarRental</h4>
+      <p class="footer-links mb-4">
+         <a href=""><i class="fab fa-facebook facebook_logo"></i></a>
+         ·
+         <a href=""><i class="fab fa-twitter twitter_logo"></i></a>
+         ·
+         <a href=""><i class="fab fa-youtube youtube_logo"></i></a>
+         ·
+         <a href=""><i class="fab fa-instagram instagram_logo"></i></a>
+         ·
+         <a href=""><i class="fab fa-linkedin linkedin_logo"></i></a>
+      </p>
+      <p class="footer-company-name">Copyright &copy 2023 CarRental®. All rights reserved.</p>
+   </footer>
 
     <!--Bootstrap JS-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
